@@ -10,7 +10,6 @@ class UserAndLocation(Document):
 	pass
 
 @frappe.whitelist(allow_guest=True)
-def getUserAccount(user):
-	account = frappe.get_value('Loan User Account Setting', user, 'account')
-	return account
-
+def getUserLocation(user):
+	location = frappe.get_value('User And Location', user, 'location')
+	return location
